@@ -1,5 +1,3 @@
-# path: wazuh-kubernetes/envs/local-env
-
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
@@ -10,4 +8,4 @@ patches:
 - path: wazuh-resources.yaml
 - target:
     kind: Service
-  path: service-patch-instance.json
+  path: service-patch.json
