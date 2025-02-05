@@ -1,0 +1,19 @@
+// path: wazuh-kubernetes/envs/local-env
+
+[
+    {
+      "op": "add",
+      "path": "/metadata/annotations/service.beta.kubernetes.io~1aws-load-balancer-type",
+      "value": "external"
+    },
+    {
+      "op": "add",
+      "path": "/metadata/annotations/service.beta.kubernetes.io~1aws-load-balancer-nlb-target-type",
+      "value": "instance"
+    },
+    {
+      "op": "add",
+      "path": "/metadata/annotations/service.beta.kubernetes.io~1aws-load-balancer-scheme",
+      "value": "internet-facing"
+    }
+  ]
