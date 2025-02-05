@@ -10,4 +10,4 @@ patches:
 - path: wazuh-resources.yaml
 - target:
     kind: Service
-  path: service-patch.json
+  path: service-patch-instance.json

@@ -1,5 +1,3 @@
-// path: wazuh-kubernetes/envs/local-env
-
 [
     {
       "op": "add",
