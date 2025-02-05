@@ -7,36 +7,8 @@
 
 # Wazuh StorageClass
 
-# apiVersion: storage.k8s.io/v1
-# kind: StorageClass
-# metadata:
-#   name: wazuh-storage
-# # provisioner: k8s.io/minikube-hostpath
-kind: StorageClass
 apiVersion: storage.k8s.io/v1
+kind: StorageClass
 metadata:
   name: wazuh-storage
-provisioner: driver.longhorn.io
-allowVolumeExpansion: true
-reclaimPolicy: Delete
-volumeBindingMode: Immediate
-parameters:
-  numberOfReplicas: "3"
-  staleReplicaTimeout: "2880" # 48 hours in minutes
-  fromBackup: ""
-  fsType: "ext4"
-  # retention: "all" # Added retention policy for all data, prob. not supported longhorn but others
-  # snapshotSchedule: "0 2 * * *" # Daily at 2 AM
-  # snapshotRetention: "7" # Keep last 7 snapshots
-  # backupSchedule: "0 3 * * *" # Daily at 3 AM
-  # backupRetention: "30d" # Keep backups for 30 days
-  recurringJobSelector: '[
-    {
-      "name":"snap",
-      "isGroup":true,
-    },
-    {
-      "name":"backup",
-      "isGroup":false,
-    }
-   ]'
+# provisioner: k8s.io/minikube-hostpath
