@@ -245,7 +245,7 @@ spec:
     spec:
       containers:
       - name: wazuh-agent
-        image: matteodalgrande/wazuh-agent-frontend:1.2.17
+        image: matteodalgrande/wazuh-agent-frontend:1.2.19
         securityContext:
           runAsUser: 0
           allowPrivilegeEscalation: true
