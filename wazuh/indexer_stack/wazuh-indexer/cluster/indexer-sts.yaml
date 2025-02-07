@@ -59,7 +59,7 @@ spec:
             privileged: true
       containers:
         - name: wazuh-indexer
-          image: 'wazuh/wazuh-indexer:4.10.1'
+          image: 'matteodalgrande/wazuh-dashboard:1.0.3'
           env:
             - name: OPENSEARCH_JAVA_OPTS
               value: '-Xms3g -Xmx3g -Dlog4j2.formatMsgNoLookups=true'
